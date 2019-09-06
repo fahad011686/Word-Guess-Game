@@ -1,7 +1,45 @@
 body {
     font-family: 'VT323', monospace;
+    color: white;
+    background-color: #002e8b;
+    max-width: 500px;
+    margin: auto;
 }
 
 #logo {
-    width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
+
+#letterGuessed,#guessRemaining, #randomWord {
+    font-size: 66px;
+}
+
+.col-lg-3
+{
+    border: 3px solid whitesmoke;
+    margin: 4px;
+    padding: 10px 10px 50px 10px;
+    max-width: 94%;
+    text-align: center;
+}
+
+.col-xs-12 {
+    float: left;
+    border: 2px solid whitesmoke;
+    margin: 4px;
+    padding: 10px 10px 50px 10px;
+    height: 150px;
+    max-width: 46%;
+    text-align: center;
+}
+
+@media screen and (min-width: 440px) {
+    .col-xs-12 {
+      float: left;
+      padding: 10px 10px 80px 10px;
+      max-width: 94%
+    }
+  }
