@@ -25,7 +25,7 @@ console.log(dashes);
 
 
 document.onkeyup = function (event) {
-    var letter = event.key.toLowerCase();
+    var letter = event.key.toUpperCase();
     // console.log(letter);
     var change = document.querySelector("#letterGuessed");
     change.innerHTML = letter;

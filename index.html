@@ -13,21 +13,28 @@
 </head>
 
 <body>
-    <div class="header">
+    <div class="container">
         <img id="logo" src="assets/images/logo.png" alt="Game Logo">
 
         <h2>Press a key to guess.</h2>
-    </div>
 
-    <div>Your Word:
-        <div id="randomWord">
-            <!-- random word -->
+
+        <div class="col-lg-3 col-md-6 col-sm-12">Your Word:
+            <div id="randomWord">
+                _ _ _ _ _
+            </div>
         </div>
-    </div>
 
-    <div>Letter Guessed:
-        <div id="letterGuessed">
-            <!-- keys pressed -->
+        <div class="col-xs-12 col-md-6">Guesses Remaining:
+            <div id="guessRemaining">
+               10
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-md-6">Letter Guessed:
+            <div id="letterGuessed">
+                <!-- keys pressed -->
+            </div>
         </div>
     </div>
 
