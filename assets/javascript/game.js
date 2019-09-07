@@ -12,15 +12,21 @@ randomizer = Math.floor(Math.random() * 3);
 currentWord = lib[randomizer];
 console.log(currentWord);
 // turns word into dashes
+
+
 var dashes = "";
 for (i = 0; i < currentWord.length - 1; i++) {
     dashes += "_ ";
 }
 dashes += "_";
 console.log(dashes);
+// return = dashes;
 // displays dashed word on HTML
-// var rando = document.querySelector("#randomWord");
-// rando.innerHTML = dashes;
+var rando = document.querySelector("#randomWord");
+rando.innerHTML = dashes;
+
+
+console.log(rando);
 
 
 
@@ -29,5 +35,10 @@ document.onkeyup = function (event) {
     // console.log(letter);
     var change = document.querySelector("#letterGuessed");
     change.innerHTML = letter;
-}
 
+    if (letter != alf) {
+        var guess = document.querySelector("#guessRemaining");
+    guess.innerHTML = guessRemaining - 1;
+
+    }
+}
