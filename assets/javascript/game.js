@@ -4,7 +4,7 @@ var lib = [
     "mario",
     "pacman",
     "qbert",
-    "centipede",
+    "joust",
     "galaga"
 ];
 
@@ -29,6 +29,8 @@ var rando = document.querySelector("#randomWord");
 rando.innerHTML = dashes;
 // console.log(rando);
 
+var guessRemaining = 10;
+
 
 
 document.onkeyup = function (event) {
@@ -39,4 +41,25 @@ document.onkeyup = function (event) {
     // play sound effect
     document.getElementById('audio').play();
 
-  }
+    // break currentWord and dashes into arrays
+    var wordSplit = [];
+    var dashSplit = [];
+    wordSplit = currentWord.split('');
+    dashSplit = dashes.split('');
+
+    // check if letter guessed is in currentWord
+    for (i = 0; i < currentWord.length; i++) {
+        if (letter == wordSplit[i]) {
+            dashSplit[i] = letter;
+            // console.log(dashSplit);
+        }
+        else {
+            guessRemaining--;
+            var score = document.querySelector("#guessRemaining");
+            score.innerHTML = guessRemaining;
+        }
+    }
+
+    // update dashes to letter guessed correctly
+    document.getElementById("randomWord").innerHTML = dashSplit.join("");
+}
